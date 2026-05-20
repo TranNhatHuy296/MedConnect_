@@ -1,0 +1,525 @@
+.page {
+  animation: fadeUp 0.35s ease;
+}
+
+.pageTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-lg);
+}
+
+
+/* ── Hero Card ── */
+.hero {
+  background: #1e293b;
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl) var(--space-2xl);
+  margin-bottom: var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.heroPattern {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 15% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 85% 30%, rgba(37, 99, 235, 0.08) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+}
+
+.heroGreeting {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: var(--space-xs);
+}
+
+.heroName {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: var(--space-xs);
+}
+
+.heroDesc {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.heroRight {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ── Circular Adherence Indicator ── */
+.adherenceCircle {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+.adherenceSvg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.adherenceTrack {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 6;
+}
+
+.adherenceProgress {
+  fill: none;
+  stroke-width: 6;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.8s ease;
+}
+
+.adherenceProgress.adherenceGood {
+  stroke: #10b981;
+}
+
+.adherenceProgress.adherenceWarning {
+  stroke: #d97706;
+}
+
+.adherenceProgress.adheranceBad {
+  stroke: #dc2626;
+}
+
+.adherenceValue {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adherenceNumber {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.adherencePercent {
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 2px;
+}
+
+.adherenceLabel {
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: var(--space-xs);
+  text-align: center;
+}
+
+.adherenceBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin-top: var(--space-sm);
+}
+
+.adherenceGood {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.adherenceWarning {
+  background: var(--color-warning-bg);
+  color: var(--color-warning);
+}
+
+.adheranceBad {
+  background: var(--color-error-bg);
+  color: var(--color-error);
+}
+
+.heroIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-lg);
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── Quick Nav Cards ── */
+.quickNav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.quickCard {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.quickCard:hover {
+  border-color: var(--color-accent);
+  color: inherit;
+}
+
+.quickCard:hover .quickCardArrow {
+  transform: translateX(4px);
+}
+
+.quickCardContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.quickCardArrow {
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.quickCardIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.quickCardIconGreen {
+  background: #ecfdf5;
+  color: #10b981;
+}
+
+.quickCardIconBlue {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.quickCardIconAmber {
+  background: #fffbeb;
+  color: #d97706;
+}
+
+.quickCardTitle {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.quickCardDesc {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+/* ── Sections Grid ── */
+.sectionsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+/* ── Section Card ── */
+.sectionCard {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-lg);
+}
+
+.nextDoseCard {
+  background: #fffbf0;
+  border-color: #fde68a;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.sectionTitle {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.sectionLink {
+  font-size: var(--text-xs);
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sectionLink:hover {
+  color: #059669;
+}
+
+/* ── Schedule List with Timeline ── */
+.scheduleList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+.scheduleItem {
+  display: flex;
+  gap: var(--space-md);
+  position: relative;
+}
+
+.timelineNode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20px;
+  flex-shrink: 0;
+  padding-top: var(--space-sm);
+}
+
+.timelineDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 2px solid var(--color-border);
+  background: var(--color-bg-card);
+}
+
+.timelineDot.statusTaken {
+  background: var(--color-success);
+  border-color: var(--color-success);
+}
+
+.timelineDot.statusPending {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
+}
+
+.timelineDot.statusMissed {
+  background: var(--color-error);
+  border-color: var(--color-error);
+}
+
+.timelineLine {
+  width: 2px;
+  flex: 1;
+  background: var(--color-border);
+  min-height: 20px;
+}
+
+.scheduleContent {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-sm);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+}
+
+.scheduleTime {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  min-width: 48px;
+}
+
+.scheduleInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.scheduleMed {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.scheduleDose {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.statusBadge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.statusTaken {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.statusPending {
+  background: #f0f4ff;
+  color: var(--color-primary);
+}
+
+.statusMissed {
+  background: var(--color-error-bg);
+  color: var(--color-error);
+}
+
+/* ── Next Dose Card ── */
+.nextDose {
+  text-align: center;
+  padding: var(--space-md);
+}
+
+.nextDoseIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #fef3c7;
+  color: #d97706;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-md);
+}
+
+.nextDoseName {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+}
+
+.nextDoseTime {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-lg);
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.countdownBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-sm) var(--space-md);
+  min-width: 56px;
+}
+
+.countdownValue {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: #d97706;
+  line-height: 1;
+}
+
+.countdownLabel {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.countdownSep {
+  font-size: var(--text-xl);
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.emptyState {
+  text-align: center;
+  padding: var(--space-xl);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2xl);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-border);
+  border-top-color: var(--color-accent);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  margin-right: var(--space-sm);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-lg);
+  }
+
+  .heroRight {
+    align-self: center;
+  }
+
+  .quickNav {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .countdown {
+    gap: var(--space-sm);
+  }
+}

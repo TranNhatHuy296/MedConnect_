@@ -1,0 +1,220 @@
+.page {
+  animation: fadeUp 0.3s ease;
+  max-width: 700px;
+}
+
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: var(--space-lg);
+  padding: 0;
+  transition: color 0.15s ease;
+}
+
+.backBtn:hover {
+  color: var(--color-primary);
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.headerIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.badgeBlueBg { background: #eff6ff; color: #2563eb; }
+.badgeGreenBg { background: #f0fdf4; color: #16a34a; }
+.badgeRedBg { background: #fef2f2; color: #dc2626; }
+.badgeOrangeBg { background: #fffbeb; color: #d97706; }
+.badgePurpleBg { background: #faf5ff; color: #9333ea; }
+.badgeGrayBg { background: #f8fafc; color: #64748b; }
+
+.headerInfo {
+  flex: 1;
+}
+
+.headerTitleRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.headerTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.headerTime {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+/* Type badge */
+.typeBadge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.badgeBlue { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
+.badgeGreen { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
+.badgeRed { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+.badgeOrange { background: #fffbeb; color: #d97706; border: 1px solid #fed7aa; }
+.badgePurple { background: #faf5ff; color: #9333ea; border: 1px solid #e9d5ff; }
+.badgeGray { background: #f8fafc; color: #64748b; border: 1px solid #e2e8f0; }
+
+/* Card */
+.card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+.cardTitle {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.messageText {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* Info grid */
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.infoLabel {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.infoValue {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Status colors */
+.statusSent { color: var(--color-primary); }
+.statusDelivered { color: #2563eb; }
+.statusRead { color: var(--color-success); }
+.statusFailed { color: var(--color-error); font-weight: 600; }
+.statusConfirmed { color: var(--color-success); font-weight: 600; }
+.statusPending { color: var(--color-warning); }
+
+/* Action bar */
+.actionBar {
+  margin-top: var(--space-lg);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.resendBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 8px 20px;
+  border-radius: var(--radius-md);
+  border: none;
+  background: var(--color-primary);
+  color: #ffffff;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.resendBtn:hover {
+  background: var(--color-primary-hover);
+}
+
+.resendBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.spinning {
+  animation: spin 0.8s linear infinite;
+}
+
+/* States */
+.emptyState {
+  text-align: center;
+  padding: var(--space-2xl);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-2xl);
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+}

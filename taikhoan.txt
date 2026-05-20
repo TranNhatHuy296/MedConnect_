@@ -1,0 +1,28 @@
+========================================
+  MEDCONNECT - TAI KHOAN DANG NHAP
+========================================
+
+--- BAC SI ---
+Email:    doctor@medconnect.vn
+Mat khau: 123456
+
+Email:    doctor2@medconnect.vn
+Mat khau: 123456
+
+--- BENH NHAN ---
+Email:    patient@medconnect.vn
+Mat khau: 123456
+
+Email:    patient2@medconnect.vn
+Mat khau: 123456
+
+Email:    patient3@medconnect.vn
+Mat khau: 123456
+
+--- MYSQL ---
+Host:     localhost
+Port:     3306
+Database: medconnect
+User:     root
+Password: root
+

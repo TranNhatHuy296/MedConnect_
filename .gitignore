@@ -1,0 +1,67 @@
+# ==================== TỰ ĐỘNG IGNORE ====================
+
+# --- File extension bỏ qua ---
+*.txt
+*.sh
+*.md
+tailieu
+
+# --- Ngoại lệ: giữ lại ---
+!taikhoan.txt
+!CLAUDE.md
+
+# --- Dependencies ---
+node_modules/
+.venv/
+__pycache__/
+
+# --- Build output ---
+dist/
+build/
+out/
+
+# --- IDE & Editor ---
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Environment & Secret ---
+.env
+.env.local
+.env.production
+*.pem
+*.key
+credentials.json
+
+# --- Log & Cache ---
+*.log
+npm-debug.log*
+yarn-debug.log*
+.cache/
+.temp/
+.tmp/
+
+# --- Docker ---
+docker-compose.override.yml
+
+# --- Test & Coverage ---
+coverage/
+.nyc_output/
+
+# --- File ngữ cảnh feedback (local only) ---
+_extracted_feedback/
+_feedback_content.md
+_extract_feedback.py
+*.docx
+*.doc
+*.pptx
+*.ppt
+*.pdf
+generate_*.py
