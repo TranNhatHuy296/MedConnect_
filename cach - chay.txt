@@ -1,0 +1,22 @@
+
+CHẠY PROJECT
+========================================
+Mở 3 terminal riêng biệt:
+
+  Terminal 1 - Backend (port 5000):
+    cd backend
+    npm start
+
+  Terminal 2 - Gateway (port 3001):
+    cd gateway
+    npm start
+
+  Terminal 3 - Frontend (port 3000):
+    cd frontend
+    npm start
+
+Sau khi cả 3 chạy xong, mở trình duyệt:
+
+  http://localhost:3000
+
+
